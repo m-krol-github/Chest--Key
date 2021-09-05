@@ -1,0 +1,415 @@
+{
+    "name": "InputsMedival",
+    "maps": [
+        {
+            "name": "Vector",
+            "id": "ed4e7f9e-f1b8-490d-9931-a00b9bd32e74",
+            "actions": [
+                {
+                    "name": "Pad",
+                    "type": "PassThrough",
+                    "id": "ca4ef3e8-0f4d-49e8-b909-e3404f7a50b8",
+                    "expectedControlType": "Vector2",
+                    "processors": "",
+                    "interactions": ""
+                },
+                {
+                    "name": "Keyb",
+                    "type": "PassThrough",
+                    "id": "02bd37d8-0e22-4119-bcdf-ebae5c348df2",
+                    "expectedControlType": "Vector2",
+                    "processors": "",
+                    "interactions": ""
+                },
+                {
+                    "name": "XR",
+                    "type": "Value",
+                    "id": "b58792f1-0143-4b4b-9045-b3143d2e97bb",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": ""
+                },
+                {
+                    "name": "New action",
+                    "type": "Button",
+                    "id": "7dda16bd-0d0b-4dfe-997e-0cfac931c589",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": ""
+                }
+            ],
+            "bindings": [
+                {
+                    "name": "",
+                    "id": "bff39688-8ba4-471a-ab5e-e4ec6c9f67a5",
+                    "path": "<Gamepad>/leftStick",
+                    "interactions": "",
+                    "processors": "StickDeadzone",
+                    "groups": "Medival",
+                    "action": "Pad",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "WASD",
+                    "id": "2ad6b8e8-3a75-42c5-8839-5ce433555da8",
+                    "path": "2DVector(mode=2)",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Keyb",
+                    "isComposite": true,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "up",
+                    "id": "47b591fa-82dc-424f-8c7b-1240a8766091",
+                    "path": "<Keyboard>/w",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "Medival",
+                    "action": "Keyb",
+                    "isComposite": false,
+                    "isPartOfComposite": true
+                },
+                {
+                    "name": "down",
+                    "id": "88a54fff-1efd-4f3a-a484-9d2e9603a06c",
+                    "path": "<Keyboard>/s",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "Medival",
+                    "action": "Keyb",
+                    "isComposite": false,
+                    "isPartOfComposite": true
+                },
+                {
+                    "name": "left",
+                    "id": "b859c295-d1fc-430b-9194-1a2de53bf886",
+                    "path": "<Keyboard>/a",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "Medival",
+                    "action": "Keyb",
+                    "isComposite": false,
+                    "isPartOfComposite": true
+                },
+                {
+                    "name": "right",
+                    "id": "b7555e6f-8fb0-482d-b5bb-a35070ec59af",
+                    "path": "<Keyboard>/d",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "Medival",
+                    "action": "Keyb",
+                    "isComposite": false,
+                    "isPartOfComposite": true
+                },
+                {
+                    "name": "",
+                    "id": "28acea52-c380-46c2-9928-c71951831710",
+                    "path": "<WMRSpatialController>{LeftHand}/joystick/x",
+                    "interactions": "",
+                    "processors": "AxisDeadzone",
+                    "groups": "Medival",
+                    "action": "XR",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "c72e6dea-863a-4b51-8932-d89876a938ca",
+                    "path": "",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "Medival",
+                    "action": "New action",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                }
+            ]
+        },
+        {
+            "name": "Movement",
+            "id": "57e725c2-246f-4bb3-803d-125f7eb05ccd",
+            "actions": [
+                {
+                    "name": "PadStick",
+                    "type": "Value",
+                    "id": "ffa840e6-5a44-40ab-bb4a-f12847645eb9",
+                    "expectedControlType": "Analog",
+                    "processors": "",
+                    "interactions": ""
+                },
+                {
+                    "name": "Break",
+                    "type": "Value",
+                    "id": "c90da492-2ccc-469c-95ed-9bb70fd8008c",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "Hold"
+                }
+            ],
+            "bindings": [
+                {
+                    "name": "",
+                    "id": "2153e8e3-689f-476d-ac94-c199f892f899",
+                    "path": "<Gamepad>/leftStick/x",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "Medival",
+                    "action": "PadStick",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "f7c026d7-98b0-4a17-a7da-eb0636f049f3",
+                    "path": "<Gamepad>/leftStick/y",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "Medival",
+                    "action": "PadStick",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "c54d0a31-3348-48d3-a005-68d1403c5726",
+                    "path": "<Gamepad>/buttonWest",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "Medival",
+                    "action": "Break",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                }
+            ]
+        },
+        {
+            "name": "Interact",
+            "id": "c761e27a-5da3-4951-9c5b-aa8f41eb196e",
+            "actions": [
+                {
+                    "name": "Use",
+                    "type": "PassThrough",
+                    "id": "a4b851b6-858c-4b03-9818-7320efc5d8a4",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": ""
+                },
+                {
+                    "name": "Accelrate",
+                    "type": "Button",
+                    "id": "0825375e-9bc5-433f-8baf-7fbb2513ae08",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": ""
+                },
+                {
+                    "name": "Cancel",
+                    "type": "Button",
+                    "id": "9240956f-2d2c-4eaa-a846-bb6053f5381e",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": ""
+                },
+                {
+                    "name": "Brake",
+                    "type": "Button",
+                    "id": "adb149df-974e-44c6-9418-215fed0d41ff",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": ""
+                }
+            ],
+            "bindings": [
+                {
+                    "name": "",
+                    "id": "ac1b1314-5a2c-44c1-a922-adbddbd60133",
+                    "path": "<Gamepad>/buttonSouth",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "Medival",
+                    "action": "Use",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "1ff84499-5bd0-4d3f-9ad3-e8115bf60892",
+                    "path": "<Gamepad>/buttonNorth",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "Medival",
+                    "action": "Accelrate",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "af062c9d-91c8-41c7-8b6f-4f3d1e929f21",
+                    "path": "<Keyboard>/escape",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "Medival",
+                    "action": "Cancel",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "419c685f-153b-4015-8e90-2ffae6170d20",
+                    "path": "<Gamepad>/select",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "Medival",
+                    "action": "Cancel",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "09f85a9e-5113-4f6e-bd8d-11a1d6673aac",
+                    "path": "<Gamepad>/buttonWest",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "Medival",
+                    "action": "Brake",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                }
+            ]
+        },
+        {
+            "name": "UtilitiesActions",
+            "id": "bf1126c5-e5d1-4dbd-9dd7-e154252f9693",
+            "actions": [
+                {
+                    "name": "CancelAction",
+                    "type": "PassThrough",
+                    "id": "f3cb9592-858a-4cbf-831c-6b355726befc",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "Press"
+                }
+            ],
+            "bindings": [
+                {
+                    "name": "",
+                    "id": "3add5163-0799-4661-ad75-fdc376380225",
+                    "path": "<Keyboard>/escape",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "Medival",
+                    "action": "CancelAction",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "4afbf7ed-0a7a-4b48-8c4a-e54f27c5a94c",
+                    "path": "<Gamepad>/buttonEast",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "Medival",
+                    "action": "CancelAction",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "ea27632e-acee-4914-a778-00026293a989",
+                    "path": "<WMRSpatialController>/menu",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "Medival",
+                    "action": "CancelAction",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                }
+            ]
+        },
+        {
+            "name": "XR",
+            "id": "6c344b25-808f-447a-9e04-70a72d10fa2d",
+            "actions": [
+                {
+                    "name": "New action",
+                    "type": "PassThrough",
+                    "id": "9a3e9b48-e7dc-4c40-a536-0d00271ea0ce",
+                    "expectedControlType": "Vector3",
+                    "processors": "",
+                    "interactions": ""
+                }
+            ],
+            "bindings": [
+                {
+                    "name": "",
+                    "id": "48bc11ae-9596-4649-85ca-172bf46f5729",
+                    "path": "",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "Medival",
+                    "action": "New action",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "b89c0ac8-0e00-4a38-801e-809c308db374",
+                    "path": "",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "Medival",
+                    "action": "New action",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                }
+            ]
+        }
+    ],
+    "controlSchemes": [
+        {
+            "name": "Medival",
+            "bindingGroup": "Medival",
+            "devices": [
+                {
+                    "devicePath": "<Keyboard>",
+                    "isOptional": true,
+                    "isOR": false
+                },
+                {
+                    "devicePath": "<Mouse>",
+                    "isOptional": true,
+                    "isOR": false
+                },
+                {
+                    "devicePath": "<XRController>{LeftHand}",
+                    "isOptional": true,
+                    "isOR": false
+                },
+                {
+                    "devicePath": "<XRController>{RightHand}",
+                    "isOptional": true,
+                    "isOR": false
+                },
+                {
+                    "devicePath": "<XRHMD>",
+                    "isOptional": true,
+                    "isOR": false
+                },
+                {
+                    "devicePath": "<Gamepad>",
+                    "isOptional": true,
+                    "isOR": false
+                },
+                {
+                    "devicePath": "<Touchscreen>",
+                    "isOptional": true,
+                    "isOR": false
+                }
+            ]
+        }
+    ]
+}
