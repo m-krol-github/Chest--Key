@@ -17,6 +17,9 @@ namespace Core.UI
         private float transitionValue;
 
         [SerializeField]
+        private Button quitBtn;
+
+        [SerializeField]
         private Image transitionObj;
 
         [SerializeField]
@@ -29,6 +32,8 @@ namespace Core.UI
             this.core = coreClasses;
             transitionObj.gameObject.SetActive(true);
             transitionValue = transitionLevelMin;
+
+            quitBtn.gameObject.SetActive(false);
 
             if(!goBack)
                 StartCoroutine(SetTransition());
@@ -63,7 +68,7 @@ namespace Core.UI
                 transitionValue -= step;
                 transitionObj.material.SetFloat("_Level", transitionValue);
             }
-
+            quitBtn.gameObject.SetActive(true);
         }
 
 
@@ -76,6 +81,11 @@ namespace Core.UI
         public override void HideView()
         {
             base.HideView();
+        }
+
+        public void QuitGame()
+        {
+            Application.Quit();
         }
     }
 }
