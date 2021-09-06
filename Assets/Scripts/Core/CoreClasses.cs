@@ -6,6 +6,7 @@ using Core.UI;
 using Chest;
 using Spawners;
 using DoorsElement;
+using CameraControll;
 
 namespace Core
 {
@@ -34,5 +35,9 @@ namespace Core
         [SerializeField]
         private UIRoot uiRoot;
         public UIRoot UIRoot => uiRoot;
+
+        [SerializeField]
+        private CameraController cameraController;
+        public CameraController CameraController => cameraController;
     }
 }

@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Core;
 
 namespace CameraControll
 {
@@ -13,7 +14,17 @@ namespace CameraControll
         [SerializeField]
         private Vector2 dir;
 
-        private void Update()
+
+        private CoreClasses core;
+
+        public void InitCamera(CoreClasses core)
+        {
+            this.core = core;
+
+
+        }
+
+        public void UpdateCamera()
         {    
             
             if (Input.GetKey(KeyCode.W))

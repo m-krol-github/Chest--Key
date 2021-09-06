@@ -9,18 +9,15 @@ namespace Core.UI
 {
     public class TextWindow : BaseView
     {
-
+        public float gameTime;
         public string windowTitle;
         public string windowContext;
 
         [SerializeField] private RectTransform baseWindow;
 
         [SerializeField] private Color baseColor;
-
         [SerializeField] private TextMeshProUGUI title;
-
         [SerializeField] private TextMeshProUGUI context;
-
         [SerializeField] private Button yesBtn;
 
         [SerializeField] private Button noBtn;

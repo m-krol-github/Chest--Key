@@ -1,7 +1,10 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
+
+using Utils;
 
 namespace Core.UI
 {
@@ -68,6 +71,9 @@ namespace Core.UI
                 transitionValue -= step;
                 transitionObj.material.SetFloat("_Level", transitionValue);
             }
+
+            Values.GameValues.isPlaying = false;
+
             quitBtn.gameObject.SetActive(true);
         }
 
@@ -85,7 +91,7 @@ namespace Core.UI
 
         public void QuitGame()
         {
-            Application.Quit();
+            SceneManager.LoadScene(SceneManager.GetActiveScene().name);
         }
     }
 }

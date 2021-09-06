@@ -18,12 +18,17 @@ namespace Utils
             //
 
             public static bool hasKey;
+
+            //
+
+            public static bool isPlaying; // time count
         }
 
         public class UiValues
         {
             public static bool isWindowOpen;
             public static bool isChestOpen;
+            public static bool onTimer;
         }
     }
 }

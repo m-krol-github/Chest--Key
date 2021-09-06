@@ -34,6 +34,7 @@ namespace PlayerManage
             this.manage = classes.Player;            
 
             Values.GameValues.isPlayerActive = true;
+            Values.GameValues.isPlaying = true;
         }
 
         public void UpdatePlayer()

@@ -18,6 +18,10 @@ namespace Core.UI
         private Transition transition;
         public Transition Transition => transition;
 
+        [SerializeField]
+        private Timer timer;
+        public Timer Timer => timer;
+
         public override void ShowView()
         {
             base.ShowView();

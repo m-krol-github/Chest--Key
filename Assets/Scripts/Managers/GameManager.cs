@@ -4,11 +4,14 @@ using UnityEngine;
 using Utils;
 using PlayerManage;
 using Spawners;
+using UnityEngine.SceneManagement;
 
 namespace Core
 {
     public class GameManager : MonoBehaviour
     {
+        public float gameTime;
+
         [SerializeField]
         private CoreClasses classes;
         public CoreClasses Classes => classes;
@@ -20,8 +23,14 @@ namespace Core
         {
             this.player = classes.Player;
             this.randomizer = classes.Randomizer;
+            gameTime = 0;
+            MainMenu();
 
+            //
+            classes.CameraController.InitCamera(classes);
+            classes.UIRoot.Timer.InitTimer(classes);
             classes.UIRoot.TextWindow.HideView();
+            //
 
             Values.GameValues.isGameStarted = true;
         }
@@ -37,6 +46,14 @@ namespace Core
 
         private void Update()
         {
+            classes.CameraController.UpdateCamera();
+            //
+            if (Values.GameValues.isPlaying)
+            {
+                gameTime += Time.deltaTime;
+                PlayerPrefs.SetFloat("LastTime", gameTime);
+            }
+            //
             if (Values.GameValues.isGameStarted)
                 player.UpdatePlayerManage();
 
@@ -45,6 +62,17 @@ namespace Core
 
             if (Values.GameValues.isDoorActive)
                 classes.Doors.DoorsUpdate();
+
+            if (Values.UiValues.onTimer)
+                classes.UIRoot.Timer.UpdateTime();
+        }
+
+        public void MainMenu()
+        {
+            Values.UiValues.isChestOpen = false;
+            Values.UiValues.isWindowOpen = false;
+            Time.timeScale = 0;
+            SceneManager.LoadScene("MainMenu", LoadSceneMode.Additive);            
         }
     }
 }
